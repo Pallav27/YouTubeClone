@@ -14,12 +14,6 @@ export default function Watch() {
     (state) => state.youtubeApp.currentPlaying
   );
 
-  console.log(currentPlaying);
-
-  const recommendedVideo = useAppSelector(
-    (state) => state.youtubeApp.recommendedVideo
-  );
-
   useEffect(() => {
     if (id) {
       dispatch(getVideoDetails(id));
